@@ -14,5 +14,6 @@ if %errorlevel% == 0 (
 ) else (
     echo.
     echo ERROR de compilacion.
+    echo intento de red
     pause
 )
