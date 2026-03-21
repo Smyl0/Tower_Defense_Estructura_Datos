@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar y Ejecutar",
+            "type": "shell",
+            "command": "C:\\mingw64\\bin\\g++",
+            "args": [
+                "-o", "${fileDirname}\\TowerDefense.exe",
+                "${file}",
+                "-IC:\\raylib\\include",
+                "-LC:\\raylib\\lib",
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm",
+                "-std=c++17"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": "Ejecutar"
+        },
+        {
+            "label": "Ejecutar",
+            "type": "shell",
+            "command": "${fileDirname}\\TowerDefense.exe",
+            "presentation": {
+                "reveal": "silent"
+            }
+        }
+    ]
+}
